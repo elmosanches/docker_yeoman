@@ -1,4 +1,32 @@
-docker_yeoman
+docker_yoeman
 =============
 
-just start this docker container to be able to perform tasks with yeoman tool. Tool runs in isolated docker and needs no dependencies on host system. After you're done with yeoman the docker container can be discarded.
+docker container for running nodejs and yoeamn
+
+Prerequisites:
+
+    lxc-docker      http://docs.docker.io/en/latest/installation
+    git
+    sudo
+
+============
+
+
+    $ git clone https://github.com/elmosanches/docker_yeoman.git
+    $ cd docker_yeoman
+    $ ./dc-build.sh
+    [sudo] password for your_user_name:
+
+    /* yeoman container is built ad installed
+
+    $ cd /path/to/new/angular/project
+    $ ./dc-start.sh
+
+    /* you are now in new shell provided by the yeoman container */
+    /* now you can execute 'yo' commands that will affect your current directory */
+
+    yeoman@e16fa3b5764e:/var/yeoman$ yo angular
+
+
+==============
+Visit http://yeoman.io/ to learn more about 'yo' command
